@@ -1,0 +1,97 @@
+body {
+    font-family: 맑은고딕;
+    font-size: 17px;
+}
+
+h2 {
+    font-size: 25;
+}
+
+h3 {
+    font-size: 20;
+}
+
+#title {
+    font-family: 궁서체;
+    font-size: 30px;
+    letter-spacing: 15px;
+}
+
+#h3_1 {
+    text-decoration: underline;
+    color: #49f726;
+}
+
+#h3_2 {
+    text-decoration: underline;
+}
+
+.indent {
+    text-indent: 30px;
+}
+
+#gray {
+    background-color: #D9D9D9;
+}
+
+ul {
+    list-style-type: square;
+}
+
+a:link {
+    color:#FFFFFF;
+}
+
+a:visited {
+    color:#FFFFFF;
+}
+
+tbody tr:hover {
+    color:#0000FF;
+    text-decoration: underline;
+    background-color: #EDD3ED;
+}
+
+a:active {
+    color:#0000FF;
+    text-decoration: underline;
+}
+
+thead {
+    background-color: #C8EBFA;
+}
+
+.second { 
+    text-align: right; /*text-align는 블록 요소에 적용되며, 인라인 요소의 텍스트 정렬을 조정*/
+}
+
+.second::before {
+    content: "약";
+}
+
+.second::after {
+    content: "(MB/초)";
+}
+
+.italic-blue {
+    font-style: italic;
+    font-weight: bold;
+    color: #0000ff;
+}
+
+.italic-red {
+    font-style: italic;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.bold-red {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.bold-green {
+    font-weight: bold;
+    color: #49f726;
+}
+
