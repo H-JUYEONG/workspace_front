@@ -61,16 +61,14 @@ thead {
     background-color: #C8EBFA;
 }
 
-.second { 
-    text-align: right; /*text-align는 블록 요소에 적용되며, 인라인 요소의 텍스트 정렬을 조정*/
+tbody td:nth-child(2n){
+    text-align: right;
 }
-
-.second::before {
-    content: "약";
+tbody td:nth-child(2n)::before{
+    content: "약 "
 }
-
-.second::after {
-    content: "(MB/초)";
+tbody td:nth-child(2n)::after{
+    content: " (MB/초)";
 }
 
 .italic-blue {
@@ -94,4 +92,3 @@ thead {
     font-weight: bold;
     color: #49f726;
 }
-
