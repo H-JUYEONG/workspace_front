@@ -1,0 +1,66 @@
+body {
+    font-family: "맑은 고딕";
+    font-size: 12px;
+    background-color: #808080;
+}
+
+.content h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content .form-group{
+    padding: 0px 0px 10px 0px;
+    margin: 0px 0px 10px 0px ;
+    border-bottom: 1px solid #808080;
+}
+
+.content {
+    width: 600px;
+    height: 700px;
+    background-color: #ffffff;
+}
+
+.form-text {
+    display: inline-block;
+    width: 120px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.post {
+    display: inline-block;
+    text-align: center;
+}
+
+.content .form-group input[name="result"] { /* 주소 2번째 입력칸*/
+    width: 300px;
+    margin: 8px 0px 0px 124px;
+}
+
+.content .form-group input[type=radio] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.content .form-group input[type=checkbox] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* 내용 */
+.content .form-group #txt-content{
+    width: 350px;
+    height: 100px;
+}
+
+/* 버튼영역 */
+.content .btn-area{
+    text-align: center;
+}
+
+/* 버튼 */
+.content .btn-area button{
+    width: 120px;
+    height: 35px;
+}
