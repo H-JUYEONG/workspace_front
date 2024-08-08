@@ -4,63 +4,91 @@ body {
     background-color: #808080;
 }
 
-.content h3 {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.content .form-group{
-    padding: 0px 0px 10px 0px;
-    margin: 0px 0px 10px 0px ;
-    border-bottom: 1px solid #808080;
-}
-
+/* 전체를 포함하고 있는 div*/
 .content {
     width: 600px;
     height: 700px;
     background-color: #ffffff;
 }
 
-.form-text {
+/* 회원가입 폰트 설정*/
+.content h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* list 설정 */
+.content ol{
+    margin-bottom: 30px;
+}
+
+.content ol>li{
+    float: left;
+}
+
+.content ol>li::after{
+    content: ">";
+}
+
+.content ol>li:last-child::after{
+    content: "";
+}
+
+/* 각각의 from을 가지고 있는 div */
+.content .form-group{
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #808080;
+}
+
+/* label */
+.content .form-text {
     display: inline-block;
     width: 120px;
     font-size: 12px;
     text-align: center;
+    vertical-align: top;
 }
 
-.post {
-    display: inline-block;
-    text-align: center;
-}
-
-.content .form-group input[name="result"] { /* 주소 2번째 입력칸*/
+/* 주소 2번째 입력칸*/
+.content .form-group input[name="result"] { 
     width: 300px;
     margin: 8px 0px 0px 124px;
 }
 
+/* 라디오박스 위치 */
 .content .form-group input[type=radio] {
     margin-right: 10px;
     vertical-align: middle;
 }
 
+/* 체크박스 위치 */
 .content .form-group input[type=checkbox] {
     margin-right: 10px;
     vertical-align: middle;
 }
 
-/* 내용 */
+/* 자기소개(textarea) */
 .content .form-group #txt-content{
     width: 350px;
     height: 100px;
 }
 
+/* input, select, textarea 폰트 설정 */
+input, textarea, select {
+    font-family: 맑은 고딕; 
+    font-size: 15px; 
+}
+
 /* 버튼영역 */
 .content .btn-area{
     text-align: center;
+    border-top: 1px solid #808080;
+    padding: 10px 0px 0px 0px;
 }
 
-/* 버튼 */
+/* 버튼 크기 */
 .content .btn-area button{
     width: 120px;
     height: 35px;
 }
+
