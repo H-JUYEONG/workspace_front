@@ -87,7 +87,6 @@
 /* 테이블 */
 #main #list-table {
     float: left;
-    /* background-color: aqua; */
     width: 800px;
     margin-left: 35px;
 }
