@@ -80,6 +80,10 @@
     padding-bottom: 5px;
 }
 
+#main #list-search input {
+    width: 150px;
+}
+
 /* 테이블 */
 #main #list-table {
     float: left;
