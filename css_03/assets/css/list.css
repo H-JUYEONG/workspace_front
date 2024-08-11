@@ -14,7 +14,6 @@
 #wrap #contents2 #main {
   /* 가로 2단 모든페이지 */
   float: left;
-  background-color: green;
   width: 800px;
 }
 
@@ -37,4 +36,124 @@
   font-size: 15px;
 
   padding: 8px 0px 8px 15px;
+}
+
+/* main */
+#main h2 {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#main #top {
+    border-bottom: 1px solid #dddddd;
+    margin-left: 25px;
+}
+
+#main ul {
+    float: right;
+}
+
+#main ul>li{
+    float: left;
+    padding: 15px 0px;
+}
+
+#main ul>li::after{
+    content: ">";
+}
+
+#main ul>li:last-child::after{
+    content: "";
+}
+
+/* 홈>게시판>일반게시판 간격 조정 */
+#main ul>li:not(:last-child)::after{
+    padding: 0px 5px;
+}
+
+/* 검색 버튼 */
+#main #list-search {
+    float: right;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+/* 테이블 */
+#main #list-table {
+    float: left;
+    /* background-color: aqua; */
+    width: 800px;
+    margin-left: 25px;
+}
+
+/* 테이블 head */
+#main #list-table thead tr th {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 45px;
+
+    background-color: #dddddd;
+    border-top: 2px solid #a6a6a6;
+    border-bottom: 2px solid #a6a6a6
+}
+
+/* 테이블 내용 */
+#main #list-table tbody tr td {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    border-bottom: 2px solid #a6a6a6;
+}
+
+/* page */
+/* 가운데로 맞추기 */
+#main #page {
+    margin: 0px 210px;
+}
+
+#main #page span {
+    float: left;
+}
+
+#main #page ol {
+    float: left;
+}
+
+#main #page ol>li {
+    float: left;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#main #page span {
+    padding: 4px 0px;
+    font-size: 14px;
+    /* vertical-align: middle; */
+}
+
+#main #page ol>li:hover, #main #page span:hover {
+    font-weight: bold;
+}
+
+/* #main #page ol>li:first-child::before {
+    content: "◀";
+    margin-right: 10px;
+}
+
+#main #page ol>li:last-child::after {
+    content: "▶";
+    margin-left: 10px;
+} */
+
+/* 글쓰기 버튼 */
+#main #write {
+    float: right;
+}
+
+#main #write button {
+    width: 60px;
+    font-size: 13px;
+    padding: 2px 0px;
 }
