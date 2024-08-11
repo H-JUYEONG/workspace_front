@@ -107,10 +107,10 @@
     border-bottom: 2px solid #a6a6a6;
 }
 
-/* page */
+/* 페이지 수 */
 /* 가운데로 맞추기 */
 #main #page {
-    margin: 0px 210px;
+    margin: 0px 220px;
 }
 
 #main #page span {
