@@ -1,287 +1,138 @@
 @charset "UTF-8";
 
-/* 레이아웃 */
-#wrap{
-    width: 1000px;
-    margin: 0 auto;
-    color: #222222;
-}
-
-#wrap #header {
-    /* background-color: blue; */
-    padding: 10px 0px 10px 0px;
-    /* border-bottom: 1px solid #f80000; */
-}
-
-#wrap #contents {
-    padding-top: 20px;
-    padding-right: 20px;
-}
-
-#wrap #footer {
-    margin-top: 100px;
-    padding: 15px 0px;
-    background-color: #e7eaed;
-    text-align: center;
-}
-
-
-/* 헤더 */
-#header h1{
+/* 컨텐츠 */
+/* aside */
+/* aside 박스 띄우기 */
+#contents #aside {
     float: left;
-    margin-top: 5px;
-    font-size: 30px;
-    font-style: italic;
-    color: #222222;
+    width: 200px;
+}
+
+#contents #aside h2{
+    font-size: 20px;
     font-weight: 900;
 }
 
-#header ul{
+/* 쇼핑정보 */
+#contents #aside .snb-list1{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+/* aside li 패딩 조절 */
+#contents #aside ul>li{
+    padding: 10px 0px 0px 0px;
+    font-size: 15px;
+    color: #aeaeae;
+}
+
+/* 내정보 */
+#contents #aside .snb-list2{
+    font-size: 15px;
+}
+
+/* content-area */
+/* content-area 박스 띄우기 */
+#contents #content-area {
+    float: left;
+    width: 730px;
+}
+
+/* 관심 텍스트 박스 띄우기 */
+#contents #content-title {
+    float: left;
+    width: 730px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #222222;
+}
+
+/* 관심 텍스트 */
+#contents #content-title h3 {
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+/* content-button 박스 띄우기 */
+#contents #content-button {
+    float: left;
+    margin-top: 12px;
+    width: 730px;
+}
+
+/* content-button 버튼들 */
+#contents #content-button button {
+    float: left;
+    margin: 0px 10px 0px 0px;
+    padding: 7px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* content-button 첫번째 버튼 */
+#contents #content-button .btn1 {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/* content-header 박스 띄우기 */
+#contents #content-header {
+    float: left;
+    margin-top: 30px;
+    width: 730px;
+    font-size: 12px;
+}
+
+/* 전체 갯수 */
+#contents #total-rows {
+    float: left;
+}
+
+/* 관심등록순 */
+#contents #sorting-filter {
     float: right;
 }
 
-#header1 li {
+/* wish_item 박스 띄우기 */
+#contents #wish_item {
+    float: left;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 730px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+/* 상품 이미지 띄우기 */
+#contents #wish_item img{
+    float: left;
+    width: 80px;
+    background-color: #f0efef;
+    border-radius: 10px;
+}
+
+/* product_detail 박스 띄우기 */
+#contents #product_detail {
     float: left;
     margin-left: 10px;
-    padding: 3px 5px;
-    font-size: 11px;
-    /*border: 1px solid #c0c0c0; */
-}
-
-#header2 li {
-    float: left;
-    margin-top: 12px;
-    margin-left: 20px;
-    padding: 3px 5px;
-    font-size: 20px;
-   /* border: 1px solid #c0c0c0; */
-}
-
-/* 검색, 장바구니 아이콘 위치 조절 */
-#header2 li #search, #cart{
-    margin-top: 5px;
-}
-
-
-
-/* 네비(상단메뉴) */
-#nav ul{
-    padding: 15px 0px; 
-}
-
-#nav ul>li{
-    float: left;
-    width: 250px;
-   
-    box-sizing: border-box;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-
-
-
-
-
-
-
-/* 메인컨텐츠 */
-/* 상품 이미지 왼쪽으로 띄우기 */
-#contents #profile{
-    float: left;
-    width: 420px;
-    padding-right: 30px;
-    margin-right: 20px;
-    border-right: 1px solid #dddddd;
-}
-
-/* 큰 이미지 */
-#contents #profile #img1 {
-    width: 420px;
-    background-color: #f0efef;
-}
-
-/* 작은 이미지 박스 */
-#contents #profile #small-img {
-    margin-top: 15px;
-    width: 420px;
-}
-
-/* 작은 이미지들 */
-#contents #profile #small-img>img {
-    width: 70px;
-    background-color: #f0efef;
-}
-
-/* 상품 설명박스 왼쪽으로 띄우기  */
-#contents #explain-box{
-    float: left;
-    font-size: 18px;
-}
-
-/* 가격 설명 박스 */
-#contents .price-box {
-    padding-bottom: 40px;
-}
-
-/* 즉시 구매가 */
-#contents .price1 {
-    font-size: 11px;
-}
-
-/* 가격 */
-#contents .price2 {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-/* 상품명 박스 */
-#contents .name-box {
-    padding-bottom: 40px;
-}
-
-/* 상품명 영어 */
-#contents .title {
     font-size: 15px;
 }
 
-/* 상품명 한글 */
-#contents .sub-title {
-    font-size: 11px;
-    color: #aeaeae;
-}
-
-/* 사이즈폼 박스 */
-#contents .form-size {
-    padding-bottom: 50px;
-}
-
-/* 사이즈 옵션 선택 */
-#contents #sel-size {
-    width: 500px;
-    height: 45px;
-    border-radius: 10px;
-    border-color: #d6d6d6;
-}
-
-/* 부가설명 박스 띄우기 */
-#contents #add-explain .detail-box {
-    float: left;
-    padding-left: 7px;
-    padding-right: 45px;
-    margin-right: 10px;
-    border-right: 1px solid #d6d6d6;
-    margin-bottom: 50px;
-}
-
-/* 부가설명 박스 제일 마지막 선 지우기 */
-#contents #add-explain .detail-box:last-child {
-    border-right: none;
-}
-
-/* 부가설명 텍스트1 */
-#contents #add-explain .txt-explain {
-    font-size: 11px;
-    color: #aeaeae;
-}
-
-/* 부가설명 텍스트2 */
-#contents #add-explain .txt-explain2 {
-    font-size: 14px;
-    color: #222222;
-}
-
-/* 버튼 */
-#contents #btns button {
-    width: 240px;
-    height: 45px;
-    border-radius: 10px;
-    border: 0;
-    outline: 0;
-    color: #662323;
-    margin-bottom: 50px;
-}
-
-/* 버튼1 색상 */
-#contents #btns .btn1 {
-    color: #ffffff;
-    background-color:hsl(4, 98%, 65%)
-}
-
-/* 버튼2 색상 */
-#contents #btns .btn2 {
-    color: #ffffff;
-    background-color: #38a2ff;
-}
-
-/* 배송정보 박스 */
-#contents #delivery h1 {
-    border-top: 1px solid #e8e7e7;
-}
-
-/* 배송 정보 h1 */
-#contents #delivery h1 {
-    font-size: 11px;
-    padding-top: 10px;
-    margin-bottom: 15px;
-}
-
-/* 일반배송 이미지 띄우기 및 크기 조정 */
-#contents #delivery img {
-    float: left;
-    width: 40px;
-    margin-right: 10px;
-    
-}
-
-/* 일반배송 박스 띄우기 */
-#contents #delivery #badge-title {
-    float: left;
-    
-}
-
-/* 일반배송 텍스트1 */
-#contents #delivery #badge-title p {
-    font-size: 11px;
-    padding-bottom: 5px;
-    
-}
-
-/* 일반배송 텍스트2 */
-#contents #delivery #badge-title .txt-badge {
-    color: #aeaeae;
-    
-}
-
-/* 사이즈 정보 텍스트1 */
-#contents #size-box h3 {
-    margin-top: 50px;
-    font-size: 15px;
+/* 상품 브랜드 */
+#contents #product_detail .brand-name{
     font-weight: 900;
+    
 }
 
-/* 신발 사이즈표 */
-#contents #size-box table {
-    margin-top: 20px;
-    text-align: center;
-    width: 1000px;
-    height: 180px;
+/* 상품 이름 */
+#contents #product_detail .name{
+    padding-top: 2px;
 }
 
-/* 신발 사이즈표 색상 */
-#contents #size-box .color {
-    background-color: #f1f1f1;
-}
-
-/* 사이즈 정보 텍스트2 */
-#contents #size-box p {
-    margin-top: 10px;
-    font-size: 11px;
-    color: #5d5c5c;
-}
-
-/* footer */
-#footer p{
-    font-size: 15px;
+/* 상품 사이즈 */
+#contents #product_detail .size{
+    padding-top: 19px;
+    font-weight: 900;
+    
 }

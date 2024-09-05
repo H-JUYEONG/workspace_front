@@ -1,85 +1,6 @@
 @charset "UTF-8";
 
-/* 레이아웃 */
-#wrap{
-    width: 1000px;
-    margin: 0 auto;
-    color: #222222;
-}
-
-#wrap #header {
-    /* background-color: blue; */
-    padding: 10px 0px 10px 0px;
-    /* border-bottom: 1px solid #f80000; */
-}
-
-#wrap #contents {
-    padding-top: 20px;
-    padding-right: 20px;
-}
-
-#wrap #footer {
-    margin-top: 100px;
-    padding: 15px 0px;
-    background-color: #e7eaed;
-    text-align: center;
-}
-
-
-/* 헤더 */
-#header h1{
-    float: left;
-    margin-top: 5px;
-    font-size: 30px;
-    font-style: italic;
-    color: #222222;
-    font-weight: 900;
-}
-
-#header ul{
-    float: right;
-}
-
-#header1 li {
-    float: left;
-    margin-left: 10px;
-    padding: 3px 5px;
-    font-size: 11px;
-    /*border: 1px solid #c0c0c0; */
-}
-
-#header2 li {
-    float: left;
-    margin-top: 12px;
-    margin-left: 20px;
-    padding: 3px 5px;
-    font-size: 20px;
-   /* border: 1px solid #c0c0c0; */
-}
-
-/* 검색, 장바구니 아이콘 위치 조절 */
-#header2 li #search, #cart{
-    margin-top: 5px;
-}
-
-
-
-/* 네비(상단메뉴) */
-#nav ul{
-    padding: 15px 0px; 
-}
-
-#nav ul>li{
-    float: left;
-    width: 250px;
-   
-    box-sizing: border-box;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* 메인컨텐츠 */
+/* 컨텐츠 */
 /* 상품 이미지 왼쪽으로 띄우기 */
 #contents #profile{
     float: left;
@@ -272,9 +193,4 @@
     margin-top: 10px;
     font-size: 11px;
     color: #5d5c5c;
-}
-
-/* footer */
-#footer p{
-    font-size: 15px;
 }
