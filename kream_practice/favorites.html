@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 설명</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./detailList.css">
+    
+
+</head>
+<body>
+    <div id="wrap">
+        
+        <!-- 헤더 -->
+        <div id="header" class="clearfix">
+            
+            
+            <!-- 로그인관련버튼 -->
+        <div class="clearfix" id="header1">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">마이페이지</a>
+                    </li>
+                    <li>
+                        <a href="#">관심</a>
+                    </li>
+                    <li>
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">로그아웃</a>
+                    </li>
+                </ul>
+        </div>
+        <div class="clearfix" id="header2">
+            <!-- 로고 -->
+            <h1>KREAM</h1>
+            <div>
+                <ul class="clearfix">
+                    <li>
+                        <a href="#"><strong>HOME</strong></a>
+                    </li>
+                    <li>
+                        <a href="#">SHOP</a>
+    
+                    </li>
+                    <li>
+                        <a href="#"><img id="search" src="./imgs/search.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img id="cart" src="./imgs/cart.jpg"></a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+            
+        </div>
+        <!-- //해더 -->
+
+        <!-- 네비(상단메뉴 GNB) 
+        <div id="nav">
+            <ul class="clearfix">
+                <li>입사지원서</li>
+                <li>게시판</li>
+                <li>갤러리</li>
+                <li>방명록</li>
+            </ul>
+        </div>
+         //네비(상단메뉴 GNB) -->
+
+        <!-- 컨텐츠 -->
+        <div id="contents" >
+            <div class="clearfix"> <!-- 이미지박스, 상품설명 박스 가지고 있는 div -->
+                <div id="profile"> <!-- 이미지만 가지고 있는 div -->
+                    <div>
+                        <img id="img1" src="./imgs/samba.jpg">
+                    </div>
+                    <div id="small-img">
+                        <img class="img2" src="./imgs/samba.jpg">
+                        <img class="img2" src="./imgs/samba2.jpg">
+                    </div>
+                </div>
+                
+                <!-- 상품 설명 -->
+                <div id="explain-box" class="clearfix">
+                    <div class="price-box">
+                        <p class="price1">즉시 구매가</p>
+                        <p class="price2">149,000원</p>
+                    </div>
+
+                    <div class="name-box">
+                        <P class="title">Adidas Samba Vegan White Black</P>
+                        <p class="sub-title">아디다스 삼바 비건 화이트 블랙</p>
+                    </div>
+
+                    <!-- 사이즈 옵션 선택 -->
+                    <div class="form-size">
+                        <select id="sel-size">
+                            <option>모든 사이즈</option>
+                            <option>230</option>
+                            <option>235</option>
+                            <option>240</option>
+                            <option>245</option>
+                            <option>250</option>
+                            <option>255</option>
+                            <option>260</option>
+                            <option>265</option>
+                            <option>270</option>
+                            <option>275</option>
+                            <option>280</option>
+                        </select>
+                    </div><!-- //사이즈 옵션 선택 -->
+
+                    <!-- 부가설명 -->
+                    <div id="add-explain" class="clearfix">
+                        <div class="detail-box">
+                            <p class="txt-explain">발매가</p>
+                            <p class="txt-explain2">139,000원</p>
+                        </div>
+                        <div class="detail-box">
+                            <p class="txt-explain">모델번호</p>
+                            <p class="txt-explain2">139,000원</p>
+                        </div>
+                        <div class="detail-box">
+                            <p class="txt-explain">출시일</p>
+                            <p class="txt-explain2">139,000원</p>
+                        </div>
+                        <div class="detail-box">
+                            <p class="txt-explain">대표색상</p>
+                            <p class="txt-explain2">139,000원</p>
+                        </div>
+                    </div> <!-- //부가설명 -->
+
+                    <!-- 구매버튼, 관심버튼 -->
+                    <div id="btns">
+                        <button class="btn1" type="button" name="" value="">구매</button>
+                        <button class="btn2" type="button" name="" value="">관심상품</button> 
+                    </div> <!-- //구매버튼, 관심버튼 -->
+
+                    <!-- 배송 정보 -->
+                    <div id="delivery" class="clearfix">
+                        <h1>배송정보</h1>
+                        <img src="./imgs/delivery.jpg">
+                        <div id="badge-title">
+                            <p>일반배송</p>
+                            <p class="txt-badge">검수 후 배송 ・ 5-7일 내 도착 예정</p>
+                        </div>
+                    </div> <!-- //배송 정보 -->
+                </div><!-- //상품 설명 -->
+            </div>
+
+             <!-- 테이블 -->
+             <div id="size-box">
+                <div>
+                    <h3>사이즈 정보</h3>
+                </div>
+                <table>
+                    <tr class="color">
+                        <td>JP</td>
+                        <td>230</td>
+                        <td>235</td>
+                        <td>240</td>
+                        <td>245</td>
+                        <td>250</td>
+                        <td>255</td>
+                        <td>260</td>
+                        <td>265</td>
+                        <td>270</td>
+                        <td>275</td>
+                        <td>280</td>
+                    </tr>
+                    <tr>
+                        <td class="color">KR</td>
+                        <td>230</td>
+                        <td>235</td>
+                        <td>240</td>
+                        <td>245</td>
+                        <td>250</td>
+                        <td>255</td>
+                        <td>260</td>
+                        <td>265</td>
+                        <td>270</td>
+                        <td>275</td>
+                        <td>280</td>
+                    </tr>
+                    <tr>
+                        <td class="color">US (M)</td>
+                        <td>5</td>
+                        <td>5.5</td>
+                        <td>6</td>
+                        <td>6.5</td>
+                        <td>7</td>
+                        <td>7.5</td>
+                        <td>8</td>
+                        <td>8.5</td>
+                        <td>9</td>
+                        <td>9.5</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td class="color">US (W)</td>
+                        <td>6</td>
+                        <td>6.5</td>
+                        <td>7</td>
+                        <td>7.5</td>
+                        <td>8</td>
+                        <td>8.5</td>
+                        <td>9</td>
+                        <td>9.5</td>
+                        <td>10</td>
+                        <td>10.5</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td class="color">UK</td>
+                        <td>4.5</td>
+                        <td>5</td>
+                        <td>5.5</td>
+                        <td>6</td>
+                        <td>6.5</td>
+                        <td>7</td>
+                        <td>7.5</td>
+                        <td>8</td>
+                        <td>8.5</td>
+                        <td>9</td>
+                        <td>9.5</td>
+                    </tr>
+                </table>
+                <p>* 해당 사이즈 정보는 고객 이해를 위한 참고용이며, 브랜드마다 또는 상품 카테고리마다 차이가 있을 수 있습니다. 정확한 내용은 실물 상품 기준으로 공식 제조사/유통사에 확인해 주시기 바랍니다.</p> 
+ 
+            </div> <!-- //테이블 -->
+           
+
+        </div>
+        <!-- //컨텐츠 -->
+        
+        <!-- 푸터 -->
+        <div id="footer">
+            <p>Copyright &#169; 2024 황주영. All right reserved</p>
+        </div>
+        <!-- //푸터 -->
+    </div>
+</body>
+</html>
