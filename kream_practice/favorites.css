@@ -1,11 +1,18 @@
 @charset "UTF-8";
 
+/* 레이아웃 */
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+    color: #222222;
+}
+
 /* 컨텐츠 */
 /* aside */
 /* aside 박스 띄우기 */
 #contents #aside {
     float: left;
-    width: 200px;
+    width: 170px;
 }
 
 #contents #aside h2{

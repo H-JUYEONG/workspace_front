@@ -19,7 +19,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* 테이블 스타일 초기화 */
  /* 테이블 경계 합치기 */
-table {border-collapse: collapse;}
+table {
+    border-collapse: collapse;
+}
 
 
 /* 앵커 태그 초기화 */
@@ -50,12 +52,6 @@ input, button, textarea, select {
 .clearfix::after {clear: both;}
 
 /* 레이아웃 */
-#wrap{
-    width: 1000px;
-    margin: 0 auto;
-    color: #222222;
-}
-
 #wrap #header {
     /* background-color: blue; */
     padding: 10px 0px 10px 0px;
