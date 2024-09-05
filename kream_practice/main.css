@@ -13,10 +13,6 @@
     /* border-bottom: 1px solid #f80000; */
 }
 
-#wrap #nav{
-    border-bottom: 1px solid #dddddd;
-}
-
 #wrap #contents {
     padding-top: 20px;
     padding-right: 20px;
@@ -33,6 +29,7 @@
 /* 헤더 */
 #header h1{
     float: left;
+    margin-top: 5px;
     font-size: 30px;
     font-style: italic;
     color: #222222;
@@ -171,6 +168,11 @@
     margin-bottom: 50px;
 }
 
+/* 부가설명 박스 제일 마지막 선 지우기 */
+#contents #add-explain .detail-box:last-child {
+    border-right: none;
+}
+
 /* 부가설명 텍스트1 */
 #contents #add-explain .txt-explain {
     font-size: 11px;
@@ -196,11 +198,13 @@
 
 /* 버튼1 색상 */
 #contents #btns .btn1 {
+    color: #ffffff;
     background-color:hsl(4, 98%, 65%)
 }
 
 /* 버튼2 색상 */
 #contents #btns .btn2 {
+    color: #ffffff;
     background-color: #38a2ff;
 }
 
@@ -258,6 +262,7 @@
     height: 180px;
 }
 
+/* 신발 사이즈표 색상 */
 #contents #size-box .color {
     background-color: #f1f1f1;
 }
@@ -267,11 +272,6 @@
     margin-top: 10px;
     font-size: 11px;
     color: #5d5c5c;
-}
-
-#contents #size-box ul {
-    margin-top: 10px;
-    margin-left: 17px;
 }
 
 /* footer */
