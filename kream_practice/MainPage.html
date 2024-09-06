@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP | KREAM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        .layout_main_container {
+            width: 100%;
+            height:100%;
+        }
+
+        .menu_container {
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid lightgray;
+            background: white;
+            z-index: 2;
+        }
+
+        .shop_title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            
+            
+        }
+
+        .shop_tabs_container{
+            z-index: 1;
+            width: 100%;
+            padding-bottom: 30px;
+        }
+
+        .tabs_items {
+            width:80%;
+            list-style: none;
+            margin: 0px auto;
+        }
+
+        .tabs_search_tabs {
+            float: left;
+            margin-right: 30px;
+        }
+
+        .tabs_search_tabs a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .active_tabs .tab_name {
+            font-weight: bold;
+            border-bottom: 2px solid black;
+        }
+
+        .popular_shoes {
+            
+            width: 100%;
+            overflow: hidden;
+            border-bottom: 1px solid lightgray;
+            
+        }
+
+        .popular_shoes_list_container {
+            white-space: nowrap;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            width: 80%;
+            margin: 0 auto; 
+            padding-top:20px;
+            padding-bottom: 20px;
+            
+        }
+
+        .popular_item {
+            display: inline-block;
+            text-align: center;
+            width: 13%; 
+            margin-right: 10px; 
+            box-sizing: border-box;
+            vertical-align: top; 
+        }
+
+        .popular_item_name {
+            font-size: 14px;
+            margin-top: 5px;
+            white-space: normal; 
+            word-wrap: break-word; 
+            line-height: 1.2; 
+        }
+
+        .popular_item img {
+            border-radius: 8px;
+            width: 100px; 
+            display: block;
+            margin: 0 auto;
+        }
+
+        .sidebar {
+            width: 20%;
+            height: 100%;
+            border-left: 1px solid lightgray;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            box-sizing: border-box;
+            float: left; 
+            overflow: hidden;
+        }
+
+        .sidebar_container {
+            height: 100%; /* Full height of the sidebar */
+            display: flex;
+            overflow-y: hidden;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .filter-section {
+            margin-bottom: 20px;
+            max-height: 200px; /* Set a maximum height for each filter section */
+            overflow-y: auto;  /* Allow scrolling within the section */
+        }
+
+        .filter-section h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .filter-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .filter-section ul li {
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .filter-section ul li input {
+            margin-right: 10px;
+        }
+
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .size-grid button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-height: 150px;
+            overflow-y: auto; 
+            text-align: center;
+        }
+
+        .color-grid div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40px; 
+        }
+
+        .color-grid p {
+            margin-top: 5px;
+            font-size: 14px;
+    }   
+
+
+        .color-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .color-circle.black { background-color: black; }
+        .color-circle.white { background-color: white; }
+        .color-circle.gray { background-color: gray; }
+        .color-circle.brown { background-color: brown; }
+        .color-circle.blue { background-color: blue; }
+        .color-circle.green { background-color: green; }
+        .color-circle.yellow { background-color: yellow; }
+        .color-circle.orange { background-color: orange; }
+        .color-circle.purple { background-color: purple; }
+        .color-circle.pink { background-color: pink; }
+        .color-circle.navy { background-color: navy; }
+        .color-circle.magenta { background-color: magenta; }
+        .color-circle.lightblue { background-color: lightblue; }
+        .color-circle.cerulean { background-color: cornflowerblue; }
+        .color-circle.mint { background-color: mintcream; }
+        .color-circle.red { background-color: red; }
+        .color-circle.darkblue { background-color: darkblue; }
+        .color-circle.darkgreen { background-color: darkgreen; }
+
+
+
+
+        .products_container {
+            width: 78%;
+            margin-top: 20px;
+            padding: 10px;
+            overflow: hidden;
+            box-sizing: border-box;
+            float: left; 
+            margin-left: 2%; 
+        }
+
+        .products_selling_items {
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            width: 22%; 
+            float: left;
+            margin: 0 10px 20px 0; 
+            box-sizing: border-box;
+        }
+
+        .products_selling_items img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 8px;
+        }
+
+        .products_selling_items_name {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .products_selling_items_price {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .layout_main_container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="layout_main_container">
+        <div class ="menu_container">
+            <div class="shop_name">
+                <h1 class="shop_title">SHOP</h1>
+            </div>
+            <div class = "shop_tabs_container">
+                    <ul class="tabs_items">
+                        <li class="tabs_search_tabs">
+                            <a href="#">
+                                <span class="tab_name">전체</span>
+                            </a>
+                        </li>
+                        <li class="tabs_search_tabs">
+                            <a href="#">
+                                <span class="tab_name">럭셔리</span>
+                            </a>
+                        </li>
+                        <li class="tabs_search_tabs">
+                            <a href="#">
+                                <span class="tab_name">아우터</span>
+                            </a>
+                        </li>
+                        <li class="tabs_search_tabs">
+                            <a href="#">
+                                <span class="tab_name">상의</span>
+                            </a>
+                        </li>
+                        <li class="tabs_search_tabs">
+                            <a href="#" class="active_tabs">
+                                <span class="tab_name">신발</span>
+                            </a>
+                        </li>
+                        <li class = "tabs_search_tabs">
+                            <a href ="#" >
+                                <span class = "tab_name">가방</span>
+                            </a>
+                        </li>
+                        <li class = "tabs_search_tabs">
+                            <a href ="#" >
+                                <span class = "tab_name">지갑</span>
+                            </a>
+                        </li>
+                        <li class = "tabs_search_tabs">
+                            <a href ="#" >
+                                <span class = "tab_name">시계</span>
+                            </a>
+                        </li>
+                        <li class = "tabs_search_tabs">
+                            <a href ="#" >
+                                <span class = "tab_name">패션잡화</span>
+                            </a>
+                        </li>
+                        <li class = "tabs_search_tabs">
+                            <a href ="#" >
+                                <span class = "tab_name">컬렉터블</span>
+                            </a>
+                        </li>
+                        <li class = "tabs_search_tabs">
+                            <a href ="#" >
+                                <span class = "tab_name">뷰티</span>
+                            </a>
+                        </li>
+                        <li class = "tabs_search_tabs">
+                            <a href ="#" >
+                                <span class = "tab_name">테크</span>
+                            </a>
+                        </li>
+                        <li class = "tabs_search_tabs">
+                            <a href ="#" >
+                                <span class = "tab_name">캠핑</span>
+                            </a>
+                        </li>
+                        <li class = "tabs_search_tabs">
+                            <a href ="#" >
+                                <span class = "tab_name">가구/리빙</span>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        
+
+
+        <div class="popular_shoes">
+            <div class="popular_shoes_list_container" id="shoeList">
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Nike Air Zoom Pegasus 36">
+                    <div class="popular_item_name">Nike Air Zoom Pegasus 36</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Adidas Ultraboost 20">
+                    <div class="popular_item_name">Adidas Ultraboost 20</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Puma Zoom V2">
+                    <div class="popular_item_name">Puma Zoom V2</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Converse All Star">
+                    <div class="popular_item_name">Converse All Star</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Reebok Classic 3">
+                    <div class="popular_item_name">Reebok Classic 3</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="New Balance 820">
+                    <div class="popular_item_name">New Balance 820</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Asics Gel-Nimbus 20</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Skechers Classic 2</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Skechers Classic 2</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Skechers Classic 2</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Nike Air Zoom Pegasus 36">
+                    <div class="popular_item_name">Nike Air Zoom Pegasus 36</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Adidas Ultraboost 20">
+                    <div class="popular_item_name">Adidas Ultraboost 20</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Puma Zoom V2">
+                    <div class="popular_item_name">Puma Zoom V2</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Converse All Star">
+                    <div class="popular_item_name">Converse All Star</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Reebok Classic 3">
+                    <div class="popular_item_name">Reebok Classic 3</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="New Balance 820">
+                    <div class="popular_item_name">New Balance 820</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Asics Gel-Nimbus 20</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Skechers Classic 2</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Skechers Classic 2</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Skechers Classic 2</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Nike Air Zoom Pegasus 36">
+                    <div class="popular_item_name">Nike Air Zoom Pegasus 36</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Adidas Ultraboost 20">
+                    <div class="popular_item_name">Adidas Ultraboost 20</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Puma Zoom V2">
+                    <div class="popular_item_name">Puma Zoom V2</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Converse All Star">
+                    <div class="popular_item_name">Converse All Star</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="Reebok Classic 3">
+                    <div class="popular_item_name">Reebok Classic 3</div>
+                </a>
+                <a href="#" class="popular_item">
+                    <img src="https://via.placeholder.com/150" alt="New Balance 820">
+                    <div class="popular_item_name">New Balance 820</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Asics Gel-Nimbus 20</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Skechers Classic 2</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Skechers Classic 2</div>
+                </a>
+                <a href = "#" class = "popular_item">
+                    <img src = "https://via.placeholder.com/150" alt = "shoes">
+                    <div class = "popular_item_name">Skechers Classic 2</div>
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="sidebar">
+            <div class = "sidebar_container">
+                <div class = "filter-section">
+                    <h2>필터</h2>
+                </div>
+                <h4>브랜드</h4>
+                <div class="filter-section">
+                    <ul>
+                        <li><input type="checkbox"> & Other Stories</li>
+                        <li><input type="checkbox"> 032c</li>
+                        <li><input type="checkbox"> 1017 Alyx 9SM</li>
+                        <li><input type="checkbox"> Adidas</li>
+                        <li><input type="checkbox"> & Other Stories</li>
+                        <li><input type="checkbox"> 032c</li>
+                        <li><input type="checkbox"> 1017 Alyx 9SM</li>
+                        <li><input type="checkbox"> Adidas</li>
+                        <li><input type="checkbox"> & Other Stories</li>
+                        <li><input type="checkbox"> 032c</li>
+                        <li><input type="checkbox"> 1017 Alyx 9SM</li>
+                        <li><input type="checkbox"> Adidas</li>
+                    </ul>
+                </div>
+
+                <h4>사이즈</h4>
+                <div class="filter-section">
+                    <div class="size-grid">
+                        <button>230</button>
+                        <button>235</button>
+                        <button>240</button>
+                        <button>245</button>
+                        <button>250</button>
+                        <button>255</button>
+                        <button>260</button>
+                        <button>265</button>
+                        <button>270</button>
+                        <button>275</button>
+                        <button>280</button>
+                    </div>
+                </div>
+
+                <h4>색상</h4>
+                <div class="filter-section">
+                    <div class="color-grid">
+                        <div>
+                            <button class="color-circle black"></button>
+                            <p>Black</p>
+                        </div>
+                        <div>
+                            <button class="color-circle white"></button>
+                            <p>White</p>
+                        </div>
+                        <div>
+                            <button class="color-circle gray"></button>
+                            <p>Gray</p>
+                        </div>
+                        <div>
+                            <button class="color-circle red"></button>
+                            <p>Red</p>
+                        </div>
+                        <div>
+                            <button class="color-circle blue"></button>
+                            <p>Blue</p>
+                        </div>
+                        <div>
+                            <button class="color-circle green"></button>
+                            <p>Green</p>
+                        </div>
+                        <div>
+                            <button class="color-circle yellow"></button>
+                            <p>Yellow</p>
+                        </div>
+                        <div>
+                            <button class="color-circle orange"></button>
+                            <p>Orange</p>
+                        </div>
+                        <div>
+                            <button class="color-circle purple"></button>
+                            <p>Purple</p>
+                        </div>
+                        <div>
+                            <button class="color-circle pink"></button>
+                            <p>Pink</p>
+                        </div>
+                        <div>
+                            <button class="color-circle brown"></button>
+                            <p>Brown</p>
+                        </div>
+                        <div>
+                            <button class="color-circle navy"></button>
+                            <p>Navy</p>
+                        </div>
+                        <div>
+                            <button class="color-circle magenta"></button>
+                            <p>Magenta</p>
+                        </div>
+                        <div>
+                            <button class="color-circle lightblue"></button>
+                            <p>Light Blue</p>
+                        </div>
+                        <div>
+                            <button class="color-circle cerulean"></button>
+                            <p>Cerulean</p>
+                        </div>
+                        <div>
+                            <button class="color-circle mint"></button>
+                            <p>Mint</p>
+                        </div>
+                        <div>
+                            <button class="color-circle darkblue"></button>
+                            <p>Dark Blue</p>
+                        </div>
+                        <div>
+                            <button class="color-circle darkgreen"></button>
+                            <p>Dark Green</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <h4>카테고리</h4>
+                <div class="filter-section">
+                    <ul>
+                        <li><input type="checkbox"> 스니커즈</li>
+                        <li><input type="checkbox"> 샌들/슬리퍼</li>
+                        <li><input type="checkbox"> 플랫</li>
+                        <li><input type="checkbox"> 로퍼</li>
+                        <li><input type="checkbox"> 더비/레이스업</li>
+                        <li><input type="checkbox"> 힐/펌프스</li>
+                        <li><input type="checkbox"> 부츠</li>
+                        <li><input type="checkbox"> 기타 신발</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            
+        </div>
+
+        <div class ="products_container">
+            <div class ="products">
+                
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+                <var><a href="#" class = "products_selling_items">
+                    <img src = "https://via.placeholder.com/300" alt = "shoes">
+                    <div class = "products_selling_items_name">Nike Air Zoom Pegasus 36</div>
+                    <div class = "products_selling_items_price">$150</div>
+                </a>
+            </var>
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    
+</body>
+
+
+</html>

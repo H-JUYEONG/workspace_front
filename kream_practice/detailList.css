@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-/* 레이아웃 */
-#wrap{
-    width: 1000px;
-    margin: 0 auto;
-    color: #222222;
-}
-
 /* 컨텐츠 */
 /* 상품 이미지 왼쪽으로 띄우기 */
 #contents #profile{
@@ -33,6 +26,7 @@
 #contents #profile #small-img>img {
     width: 70px;
     background-color: #f0efef;
+    cursor: pointer;
 }
 
 /* 상품 설명박스 왼쪽으로 띄우기  */
@@ -84,6 +78,7 @@
     height: 45px;
     border-radius: 10px;
     border-color: #d6d6d6;
+    cursor: pointer;
 }
 
 /* 부가설명 박스 띄우기 */
@@ -120,8 +115,8 @@
     border-radius: 10px;
     border: 0;
     outline: 0;
-    color: #662323;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 /* 버튼1 색상 */

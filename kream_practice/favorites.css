@@ -1,18 +1,17 @@
 @charset "UTF-8";
 
-/* 레이아웃 */
-#wrap{
-    width: 1200px;
-    margin: 0 auto;
-    color: #222222;
-}
-
 /* 컨텐츠 */
 /* aside */
 /* aside 박스 띄우기 */
 #contents #aside {
     float: left;
-    width: 170px;
+    width: 140px;
+}
+
+/* aside 마우스 올렸을때 */
+#contents #aside ul>li:hover {
+    font-weight: bold;
+    color: #000000;
 }
 
 #contents #aside h2{
@@ -43,13 +42,14 @@
 /* content-area 박스 띄우기 */
 #contents #content-area {
     float: left;
-    width: 730px;
+    width: 829px;
+    height: 650px;
 }
 
 /* 관심 텍스트 박스 띄우기 */
 #contents #content-title {
     float: left;
-    width: 730px;
+    width: 829px;
     padding-bottom: 10px;
     border-bottom: 3px solid #222222;
 }
@@ -64,7 +64,7 @@
 #contents #content-button {
     float: left;
     margin-top: 12px;
-    width: 730px;
+    width: 829px;
 }
 
 /* content-button 버튼들 */
@@ -76,6 +76,7 @@
     border: 1px solid #dddddd;
     border-radius: 20px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 /* content-button 첫번째 버튼 */
@@ -88,7 +89,7 @@
 #contents #content-header {
     float: left;
     margin-top: 30px;
-    width: 730px;
+    width: 829px;
     font-size: 12px;
 }
 
@@ -100,6 +101,7 @@
 /* 관심등록순 */
 #contents #sorting-filter {
     float: right;
+    cursor: pointer;
 }
 
 /* wish_item 박스 띄우기 */
@@ -107,7 +109,7 @@
     float: left;
     margin-top: 20px;
     padding-bottom: 20px;
-    width: 730px;
+    width: 829px;
     border-bottom: 1px solid #e7e7e7;
 }
 
@@ -142,4 +144,86 @@
     padding-top: 19px;
     font-weight: 900;
     
+}
+
+/* 구매 버튼 박스 띄우기 */
+#contents #btn_action {
+    float: right;
+    margin-top: 5px;
+    
+}
+
+/* 버튼 꾸미기 */
+#contents #btn_action button{
+    width: 160px;
+    height: 60px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    color: #ffffff;
+    background-color: hsl(4, 98%, 65%);
+    cursor: pointer;
+}
+
+/* 구매 텍스트 */
+#contents #btn_action .buy {
+    float: left;
+    padding: 20px 10px 10px 10px;
+    height: 30px;
+    text-align: center;
+    font-weight: 900;
+    border-right: 1px solid #bbbbbb3c;
+}
+
+/* 가격 텍스트 */
+#contents #btn_action .amount {
+    float: right;
+    height: 50px;
+    text-align: left;
+    padding-top: 13px;
+    margin-right: 20px;
+}
+
+/* 가격 텍스트1 */
+#contents #btn_action .txt1 {
+    font-weight: 900;
+}
+
+/* 가격 텍스트2 */
+#contents #btn_action .txt2 {
+    font-size: 10px;
+    color: #ffffffc5;
+}
+
+/* 삭제 */
+#contents #btn_action #delete {
+    font-size: 11px;
+    color: #000000bf;
+    text-align: right;
+    text-decoration: underline;
+}
+
+/* paging 박스 띄우기*/
+#contents #paging {
+    float: left;
+    width: 829px;
+   
+}
+
+/* 페이징 숫자 리스트 박스 크기 조정*/
+#contents #paging #nums {
+    width: 300px;
+    /* margin: 0px auto; */
+    margin: 0px 280px;
+}
+
+/* 페이징 숫자 리스트 띄우기 */
+#contents #paging ul>li {
+    float: left;
+    padding: 20px 5px 5px 5px;
+}
+
+/* 숫자에 마우스 올렸을때 */
+#contents #paging #nums ul>li:hover {
+    font-weight: bold;
 }

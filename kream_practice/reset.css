@@ -52,27 +52,40 @@ input, button, textarea, select {
 .clearfix::after {clear: both;}
 
 /* 레이아웃 */
+#wrap{
+    width: 1000px;
+    margin: 0 auto;
+    color: #222222;
+    height: 160vh; /* 예시로 페이지를 2배로 길게 설정 */
+}
+
 #wrap #header {
     /* background-color: blue; */
     padding: 10px 0px 10px 0px;
     /* border-bottom: 1px solid #f80000; */
 }
 
+/* contents 크기 */
 #wrap #contents {
+    width: 980px;
     padding-top: 20px;
-    padding-right: 20px;
-    border: 1px solid #ff0000;
+    padding-right: 20px;   
 }
 
 #wrap #footer {
     margin-top: 100px;
     padding: 15px 0px;
-    background-color: #e7eaed;
     text-align: center;
+    border-top: 1px solid #e7e7e7;
 }
 
 
 /* 헤더 */
+/* #header {
+    position: sticky;
+    top: 10px;
+} */
+
 #header h1{
     float: left;
     margin-top: 5px;
@@ -109,6 +122,156 @@ input, button, textarea, select {
 }
 
 /* footer */
-#footer p{
-    font-size: 15px;
+#footer #service-area {
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 40px;
+}
+
+#footer #service-area ul>li {
+    color: #808080cb;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+/* 메뉴 타이틀 */
+#footer p.menu-title {
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+/* 이용안내 박스 */
+#footer .menu-box1{
+    float: left;
+    margin-top: 20px;
+    margin-right: 150px;
+    padding: 5px;
+    text-align: left;
+}
+
+/* 고객지원 박스 */
+#footer .menu-box2{
+    float: left;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: left;
+}
+
+/* 고객센터 박스 */
+#footer .customer-service {
+    float: right;
+    padding: 5px;
+    margin-top: 20px;
+    margin-right: 80px;
+    text-align: left;
+}
+
+/* 이용시간 박스*/
+#footer .service-time {
+    font-size: 12px;
+    padding: 10px 0px 0px 0px;
+    color: #808080cb;
+}
+
+/* 고객센터 p1 */
+#footer .customer-service .txt1 {
+    font-weight: bold;
+    color: #222222;
+}
+
+/* 고객센터 p2 */
+#footer .customer-service .txt2 {
+    padding-top: 10px;
+    font-size: 13px;
+    color: #222222;
+}
+
+/* 자주 묻는 질문 */
+#footer .service-btn {
+    width: 90px;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #000;
+}
+
+/* corporation-area 박스 설정*/
+#footer #corporation-area {
+    margin-top: 30px;
+    /* border: 1px solid #000; */
+}
+
+/* term-list 리스트박스 띄우기 */
+#footer #corporation-area .term-list {
+    float:left;
+}
+
+/* 리스트 나열 띄우기 */
+#footer #corporation-area ul>li{
+    float:left;
+    padding-right: 25px;
+}
+
+/* corporation-area 설정 */
+#footer #corporation-area .term-list {
+    font-size: 14px;
+    color: #000;
+}
+
+#footer #corporation-area .term-list ul>li:last-child {
+    font-weight: bold;
+}
+
+/* sns 이미지 */
+#footer #sns-box {
+    float: right;
+}
+
+/* 회사소개 */
+#footer #business-title {
+    float: left;
+    width: 700px;
+    padding-top: 20px;
+    font-size: 12px;
+    text-align: left;
+    color: #808080cb;
+}
+
+#footer #business-title a{
+    text-decoration: underline;
+}
+
+/* 채무지급보증 */
+#footer #notice-guarantee {
+    float: left;
+    padding-top: 40px;
+    font-size: 11px;
+    text-align: left;
+    color: #808080cb;
+}
+
+#footer #notice-guarantee .bank {
+    padding-bottom: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #222222;
+}
+
+#footer #notice-guarantee a{
+    text-decoration: underline;
+}
+
+#footer #notice{
+    float: left;
+    width: 1000px;
+    padding-top: 20px;
+    text-align: left;
+    font-size: 11px;
+    color: #808080b0;
+}
+
+#footer #notice .corp {
+    float: right;
 }
