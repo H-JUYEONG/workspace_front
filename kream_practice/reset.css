@@ -67,9 +67,9 @@ input, button, textarea, select {
 
 /* contents 크기 */
 #wrap #contents {
-    width: 980px;
-    padding-top: 20px;
-    padding-right: 20px;   
+    width: 1000px;
+    /* padding-top: 20px;
+    padding-right: 20px; */
 }
 
 #wrap #footer {
@@ -81,10 +81,12 @@ input, button, textarea, select {
 
 
 /* 헤더 */
-/* #header {
+#header {
     position: sticky;
-    top: 10px;
-} */
+    top: 0px;
+    z-index: 2px;
+    background-color: #ffffff;
+}
 
 #header h1{
     float: left;
@@ -93,6 +95,7 @@ input, button, textarea, select {
     font-style: italic;
     color: #222222;
     font-weight: 900;
+    z-index: 1;
 }
 
 #header ul{
@@ -105,6 +108,10 @@ input, button, textarea, select {
     padding: 3px 5px;
     font-size: 11px;
     /*border: 1px solid #c0c0c0; */
+}
+
+#header2 {
+    z-index: 1;
 }
 
 #header2 li {

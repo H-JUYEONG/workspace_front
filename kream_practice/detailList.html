@@ -70,7 +70,7 @@
          //네비(상단메뉴 GNB) -->
 
         <!-- 컨텐츠 -->
-        <div id="contents" >
+        <div id="contents" class="clearfix">
             <div class="clearfix"> <!-- 이미지박스, 상품설명 박스 가지고 있는 div -->
                 <div id="profile"> <!-- 이미지만 가지고 있는 div -->
                     <div>
@@ -133,9 +133,21 @@
                     </div> <!-- //부가설명 -->
 
                     <!-- 구매버튼, 관심버튼 -->
-                    <div id="btns">
-                        <button class="btn1" type="button" name="" value="">구매</button>
-                        <button class="btn2" type="button" name="" value="">관심상품</button> 
+                    <div id="btn-action" class="clearfix">
+                        <button id="btn1" class="clearfix" type="button" name="" value="">
+                            <div class="buy">
+                                구매
+                            </div>
+                            <div class="amount">
+                                <div class="txt1">
+                                    116,000원
+                                </div>
+                                <div class="txt2">
+                                    즉시 구매가
+                                </div>  
+                            </div>
+                        </button>
+                        <button id="btn2" type="button" name="" value="">관심상품</button> 
                     </div> <!-- //구매버튼, 관심버튼 -->
 
                     <!-- 배송 정보 -->
