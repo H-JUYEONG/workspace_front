@@ -11,36 +11,30 @@
 .container.row{
     flex-direction: row;
     justify-content: flex-start;
-    /* align-items: flex-start; */
-    /* align-items: flex-end; */
-    /* align-items: center; */
-    /* align-items: baseline; */
-    align-items: stretch;
-    
+    align-items: flex-start;
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
 }
 
 .container.column{
     flex-direction: column;
     justify-content: flex-start;
-    /* align-items: flex-start; */
-    /* align-items: flex-end; */
-    /* align-items: center; */
-    /* align-items: baseline; */
-    align-items: stretch;
-    
+    align-items: flex-start;
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap; */
+    flex-wrap: wrap-reverse;
 }
+
 
 .item1 {
     border: 3px solid red;
-    font-size: 15px;
 }
 
 .item2 {
     border: 3px solid blue;
-    font-size: 20px;
 }
 
 .item3 {
     border: 3px solid green;
-    font-size: 25px;
 }
