@@ -1,0 +1,157 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b19cd9;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
+.header-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #b19cd9;
+  font-weight: bold;
+}
+
+.header-links input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #b19cd9;
+  border-radius: 20px;
+  color: #b19cd9;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #f8f8fc;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #b19cd9;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #a187b8;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+/* Sidebar */
+aside {
+  background-color: #faf8fc;
+  padding: 20px;
+  width: 200px;
+  height: 300px;
+  font-size: 18px;
+}
+
+aside a {
+  display: block;
+  margin-bottom: 15px;
+  color: #b19cd9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+}
+
+/* Detailed Page Styles */
+.detail-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.detail-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.detail-info {
+  max-width: 600px;
+}
+
+.detail-info h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.detail-info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.detail-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.detail-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #b19cd9;
+  color: #b19cd9;
+  background-color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.detail-buttons button:hover {
+  background-color: #b19cd9;
+  color: #ffffff;
+}
+
+/* Footer */
+footer {
+  background-color: #f8f8fc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #b19cd9;
+  margin-top: 40px;
+}
