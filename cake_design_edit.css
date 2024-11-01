@@ -96,154 +96,137 @@ main {
   flex: 1;
 }
 
-/* Circular Category Buttons */
-.nav-title {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 30px;
-  justify-content: flex-start;
+/* Edit Page Styles */
+.edit-container {
+  padding: 20px;
 }
 
-.nav-title button {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 2px solid #b19cd9;
-  background-color: white;
-  color: #b19cd9;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Title and Search Section */
-.title-search {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.edit-container h3 {
+  font-size: 28px;
+  color: #333;
   margin-bottom: 20px;
 }
 
-.title-search h2 {
-  margin: 0;
-  font-size: 24px;
+.edit-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-preview {
+  margin-bottom: 20px;
+}
+
+.image-preview label {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.image-preview img {
+  width: 100%;
+  max-width: 450px;
+  margin-top: 10px;
+}
+
+/* Image Upload Section */
+.image-upload-section {
+  margin-bottom: 20px;
+}
+
+.image-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+.image-section-header label {
+  font-size: 18px;
+  font-weight: bold;
   color: #666;
 }
 
-.search-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.search-bar input[type="text"] {
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #b19cd9;
-  border-radius: 5px;
-  color: #333;
-  width: 200px;
-}
-
-.search-bar button {
+.add-image-button {
   padding: 8px 15px;
-  font-size: 16px;
-  border: none;
   background-color: #b19cd9;
-  color: #ffffff;
+  color: #fff;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.search-bar button:hover {
+.add-image-button:hover {
   background-color: #a187b8;
 }
 
-/* List Info Section */
-.list-info {
+.image-field {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  font-size: 16px;
-  color: #333;
 }
 
-.list-info span {
-  font-weight: bold;
-  color: #666;
+.image-field input[type="file"] {
   margin-right: 10px;
 }
 
-.list-info select {
+.image-field .filename {
+  color: #666;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.remove-button {
+  background-color: #f28b82;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Form Fields */
+.edit-form label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.edit-form input[type="text"],
+.edit-form textarea,
+.edit-form input[type="file"] {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #b19cd9;
+  border-radius: 5px;
+  color: #333;
+}
+
+.edit-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* Edit Buttons */
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-buttons button {
+  padding: 10px 20px;
   font-size: 16px;
   border: 1px solid #b19cd9;
   color: #b19cd9;
   background-color: #ffffff;
   border-radius: 5px;
-}
-
-/* Product Grid */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 30px;
-  justify-items: center;
-}
-
-.product-card {
-  text-align: center;
-  padding: 10px 0;
-}
-
-.product-card img {
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 10px;
-}
-
-.product-card h3 {
-  font-size: 16px;
-  margin: 10px 0;
-  color: #333;
-}
-
-.product-card p {
-  font-weight: bold;
-  color: #666;
-}
-
-/* Pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.pagination .page-number,
-.pagination .page-arrow {
-  font-size: 16px;
-  color: #b19cd9;
-  text-decoration: none;
   cursor: pointer;
 }
 
-.pagination .page-number.active {
-  font-weight: bold;
-  color: #b19cd9;
-  border-radius: 5px;
-}
-
-.pagination .page-number:hover,
-.pagination .page-arrow:hover {
-  font-weight: bold;
-  border-radius: 5px;
+.edit-buttons button:hover {
+  background-color: #b19cd9;
+  color: #ffffff;
 }
 
 /* Footer */

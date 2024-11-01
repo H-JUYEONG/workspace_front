@@ -79,7 +79,6 @@ aside {
   background-color: #faf8fc;
   padding: 20px;
   width: 200px;
-  height: 300px;
   font-size: 18px;
 }
 
@@ -103,12 +102,35 @@ main {
   padding: 20px 0;
 }
 
-.detail-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
+/* Main Image */
+.detail-image {
+  text-align: center;
 }
 
+.detail-image img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Thumbnail Image List */
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  height: 80px;
+  cursor: pointer;
+}
+
+.thumbnail:hover {
+  border-color: #b19cd9;
+}
+
+/* Product Information */
 .detail-info {
   max-width: 600px;
 }
