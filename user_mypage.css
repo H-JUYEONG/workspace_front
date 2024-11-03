@@ -1,0 +1,265 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b19cd9;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
+.header-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #b19cd9;
+  font-weight: bold;
+}
+
+.header-links input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #b19cd9;
+  border-radius: 20px;
+  color: #b19cd9;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #f8f8fc;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #b19cd9;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #a187b8;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+/* Sidebar */
+aside {
+  background-color: #faf8fc;
+  padding: 20px;
+  width: 200px;
+  height: 600px;
+  font-size: 18px;
+}
+
+.bold a {
+  display: block;
+  margin-bottom: 15px;
+  color: #b19cd9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.small a {
+  display: block;
+  margin-bottom: 15px;
+  color: #b19cd9;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+}
+
+/* Circular Category Buttons */
+.nav-title {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: flex-start;
+}
+
+.nav-title button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #b19cd9;
+  background-color: white;
+  color: #b19cd9;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title and Search Section */
+.title-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.title-search h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #666;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #b19cd9;
+  border-radius: 5px;
+  color: #333;
+  width: 200px;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  font-size: 16px;
+  border: none;
+  background-color: #b19cd9;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #a187b8;
+}
+
+/* List Info Section */
+.list-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.list-info span {
+  font-weight: bold;
+  color: #666;
+  margin-right: 10px;
+}
+
+.list-info select {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #b19cd9;
+  color: #b19cd9;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.product-card {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-card p {
+  font-weight: bold;
+  color: #666;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.pagination .page-number,
+.pagination .page-arrow {
+  font-size: 16px;
+  color: #b19cd9;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pagination .page-number.active {
+  font-weight: bold;
+  color: #b19cd9;
+  border-radius: 5px;
+}
+
+.pagination .page-number:hover,
+.pagination .page-arrow:hover {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #f8f8fc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #b19cd9;
+  margin-top: 40px;
+}

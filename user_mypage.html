@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yummy</title>
+  <link rel="stylesheet" href="./user_mypage.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <span class="logo">Yummy</span>
+      <div class="header-links">
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+        <a href="#">장바구니</a>
+        <input type="text" placeholder="어떤 케이크를 찾으시나요?">
+        <a href="#" class="search-icon">🔍</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">케이크</a>  
+    <a href="#">경매게시판</a> 
+    <a href="#">자유게시판</a>
+    <a href="#">고객센터</a>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Sidebar -->
+    <aside>
+        <div class="bold">
+            <a href="#">나의 쇼핑내역</a>
+        </div>
+        <div class="small">
+            <a href="#"> 주문조회</a>
+            <a href="#"> 취소/신청현황</a>
+        </div>
+
+        <div class="bold">
+            <a href="#">내 활동</a>
+        </div>
+        <div class="small">
+            <a href="#">내가 작성한 게시글</a>
+            <a href="#">내가 작성한 댓글</a>
+            <a href="#">내가 작성한 리뷰</a>
+            <a href="#">나의 도안</a>
+        </div>
+        
+        <div class="bold">
+            <a href="#">관심</a>
+        </div>
+        <div class="small">
+            <a href="#">관심 업체</a>
+            <a href="#">관심 도안</a>
+        </div>
+
+        <div class="bold">
+            <a href="#">회원정보</a>
+        </div>
+        <div class="small">
+            <a href="#">회원정보 변경</a>
+            <!-- <a href="#">회원탈퇴</a> -->
+        </div>
+    </aside>
+
+    <!-- Main Section -->
+    <main>
+      <div class="nav-title">
+        <button>내가 만든 도안 리스트</button>
+        <button>공유 도안 리스트</button>
+        <button>도안 등록</button>
+      </div>
+
+      <!-- Title and Search Section -->
+      <div class="title-search">
+        <h2>내가 만든 도안 리스트</h2>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="도안 검색">
+          <button onclick="searchDesign()">검색</button>
+        </div>
+      </div>
+      
+      <!-- List Information Section -->
+      <div class="list-info">
+        <span>ALL 92</span>
+        <select id="sort-options">
+          <option value="latest">등록순</option>
+          <option value="popular">인기순</option>
+          <option value="name">이름순</option>
+        </select>
+      </div>
+
+      <div class="product-grid">
+        <!-- Example Product Cards -->
+        <div class="product-card">
+          <img src="./sk1.png" alt="도안1">
+          <h3>도안1</h3>
+          <p>1,000원</p>
+        </div>
+        <div class="product-card">
+          <img src="./sk2.png" alt="도안2">
+          <h3>도안2</h3>
+          <p>2,000원</p>
+        </div>
+        <div class="product-card">
+          <img src="./sk3.png" alt="도안3">
+          <h3>도안3</h3>
+          <p>3,000원</p>
+        </div>
+        <div class="product-card">
+          <img src="./sk4.png" alt="도안4">
+          <h3>도안4</h3>
+          <p>4,000원</p>
+        </div>
+        <div class="product-card">
+          <img src="./sk1.png" alt="도안1">
+          <h3>도안1</h3>
+          <p>1,000원</p>
+        </div>
+        <div class="product-card">
+          <img src="./sk2.png" alt="도안2">
+          <h3>도안2</h3>
+          <p>2,000원</p>
+        </div>
+        <div class="product-card">
+          <img src="./sk3.png" alt="도안3">
+          <h3>도안3</h3>
+          <p>3,000원</p>
+        </div>
+        <div class="product-card">
+          <img src="./sk4.png" alt="도안4">
+          <h3>도안4</h3>
+          <p>4,000원</p>
+        </div>
+        <!-- Add more products as needed -->
+      </div>
+
+      <!-- Pagination Section -->
+      <div class="pagination">
+        <a href="#" class="page-arrow">&lt;</a>
+        <a href="#" class="page-number active">1</a>
+        <a href="#" class="page-number">2</a>
+        <a href="#" class="page-number">3</a>
+        <a href="#" class="page-number">4</a>
+        <a href="#" class="page-arrow">&gt;</a>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Copyright © 2020 황주영. All rights reserved</p>
+  </footer>
+</body>
+</html>
