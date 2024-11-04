@@ -1,0 +1,79 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* 전체 컨테이너 */
+.management-container {
+  max-width: 1100px;
+  margin: 40px 40px;
+  padding: 20px;
+}
+
+/* 제목 */
+.management-container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 설명 텍스트 */
+.instructions {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* 테이블 스타일 */
+.review-reply-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-reply-table thead th {
+  background-color: #f8f8fc;
+  color: #333;
+  font-weight: bold;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.review-reply-table tbody td {
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* 텍스트가 한 줄에 유지되도록 설정 */
+}
+
+.review-reply-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+/* 별점 스타일 */
+.rating {
+  font-size: 20px;
+  color: #FFD700; /* 별색을 노란색으로 설정 */
+}
+
+/* 삭제 버튼 스타일 */
+.delete-button {
+  padding: 5px; /* 세로 padding을 줄이고 가로 padding을 넓게 설정 */
+  font-size: 14px;
+  color: #fff;
+  background-color: #f28b82;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  width: 60px; /* 버튼을 가로로 길게 설정 */
+}
+
+.delete-button:hover {
+  background-color: #e57373;
+}

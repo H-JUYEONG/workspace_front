@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yummy - 도안 수정 페이지</title>
-  <link rel="stylesheet" href="./cake_design_edit.css">
+  <title>Yummy - 도안 등록 페이지</title>
+  <link rel="stylesheet" href="./cake_design_add.css">
 </head>
 <body>
 
@@ -42,18 +42,12 @@
     <!-- Main Section -->
     <main>
       <div class="edit-container">
-        <h3>도안 수정</h3>
+        <h3>도안 등록</h3>
         
-        <!-- Current Image Display -->
-        <div class="image-preview">
-          <img src="./sk1.png" alt="현재 도안 이미지" id="current-image">
-          <img src="./sk1.png" alt="현재 도안 이미지" id="current-image">
-        </div>
-
-        <!-- Existing Images Section -->
+        <!-- Image Upload Section -->
         <div class="image-upload-section">
           <div class="image-section-header">
-            <label>도안에 포함된 이미지</label>
+            <label>도안 이미지</label>
             <button type="button" class="add-image-button">이미지 추가</button>
           </div>
           
@@ -61,25 +55,20 @@
           <div class="registered-images">
             <div class="image-field">
               <input type="file" name="design-image[]" accept="image/*">
-              <span class="filename">이미지1.png</span>
               <button type="button" class="remove-button">삭제</button>
             </div>
-            <div class="image-field">
-              <input type="file" name="design-image[]" accept="image/*">
-              <span class="filename">이미지2.png</span>
-              <button type="button" class="remove-button">삭제</button>
-            </div>
-            <!-- 추가된 이미지 항목을 위한 영역 -->
           </div>
         </div>
 
         <!-- Form for design details -->
         <form class="edit-form">
-          <label for="description">도안 설명<span class="required-note">(예시 가이드를 따라 필수로 작성해주세요)</span></label>
-          <textarea id="description" name="description">이 케이크는 귀여움이 포인트입니다~ 많이 사용해주세요^^
+          <label for="description">도안 설명 <span class="required-note">(예시 가이드를 따라 필수로 작성해주세요)</span></label>
+          <textarea id="description" name="description" rows="6" placeholder="예시:
+이 케이크는 귀여움이 포인트입니다~ 많이 사용해주세요^^
 상세 설명:
 크기: 0호(10cm) ~ 4호(12cm)
-추천 행사: 생일, 기념일</textarea>
+추천 행사: 생일, 기념일" required></textarea>
+
           <div class="edit-buttons">
             <button type="submit">저장</button>
             <button type="button">취소</button>

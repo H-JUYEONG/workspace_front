@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>케이크 디자인 요청 게시글 작성</title>
+  <link rel="stylesheet" href="./user_design.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>케이크 디자인 요청 게시글 작성</h2>
+    <form>
+
+      <!-- 제목 -->
+      <label for="title">제목</label>
+      <input type="text" id="title" name="title" placeholder="예: 생일 케이크 제작 주문 - 이런 디자인으로 해주실 분 계신가요?" required>
+
+      <!-- 카테고리 -->
+      <label for="category">카테고리</label>
+      <select id="category" name="category">
+        <option value="birthday">생일 케이크</option>
+        <option value="wedding">웨딩 케이크</option>
+        <option value="anniversary">기념일 케이크</option>
+      </select>
+
+      <!-- 디자인 설명 -->
+      <label for="description">디자인 설명</label>
+      <textarea id="description" name="description" rows="4" placeholder="원하는 디자인 스타일을 설명해주세요." required></textarea>
+
+      <!-- 이미지 업로드 -->
+      <label for="image">참고 이미지 업로드</label>
+      <input type="file" id="image" name="image" accept="image/*">
+
+      <!-- 사이즈 및 레이어 -->
+      <label for="size">케이크 사이즈 및 레이어</label>
+      <input type="text" id="size" name="size" placeholder="예: 지름 15cm, 2단 케이크">
+
+      <!-- 예산 -->
+      <label for="budget">예산 (원)</label>
+      <input type="number" id="budget" name="budget" placeholder="예: 50000">
+
+      <!-- 희망 배송 날짜 -->
+      <label for="delivery-date">희망 배송 날짜</label>
+      <input type="date" id="delivery-date" name="delivery-date" required>
+
+      <!-- 특별 요청사항 -->
+      <label for="special-requests">특별 요청사항</label>
+      <textarea id="special-requests" name="special-requests" rows="3" placeholder="알레르기 정보, 채식 케이크 여부 등"></textarea>
+
+      <!-- 제출 버튼 -->
+      <button type="submit">게시글 작성</button>
+    </form>
+  </div>
+
+</body>
+</html>

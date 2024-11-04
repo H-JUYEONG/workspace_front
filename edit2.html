@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>케이크 도안 게시글 수정</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            padding: 2rem;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .file-upload {
+            border: 2px dashed #ddd;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: #786fa6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #574b90;
+        }
+        .info {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>케이크 도안 게시글 작성</h1>
+        <p class="info">아래 가이드에 따라 도안 정보를 입력해 주세요.</p>
+        
+        <form>
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" id="title" placeholder="도안1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="images">도안 이미지</label>
+                <div class="file-upload">
+                    <input type="file" id="images" multiple accept="image/*" required>
+                    <p class="info">최대 3장까지 업로드 가능</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">도안 설명</label>
+                <textarea id="description" placeholder="이 케이크는 귀여움이 포인트입니다~ 많이 사용해주세요^^" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="size">케이크 크기</label>
+                <input type="text" id="size" placeholder="0호(10cm) ~ 4호(12cm)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="events">적용 가능 이벤트</label>
+                <input type="text" id="events" placeholder="생일, 기념일" required>
+            </div>
+
+            <button type="submit" class="submit-btn">게시글 수정</button>
+            <button type="submit" class="submit-btn">게시글 취소</button>
+        </form>
+    </div>
+</body>
+</html>

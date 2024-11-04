@@ -1,0 +1,88 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* 폼 컨테이너 */
+.form-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.form-container h2 {
+  font-size: 24px;
+  color: #b19cd9;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 폼 필드 스타일 */
+form label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #333;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+/* 이미지 추가 버튼 */
+.add-image-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #b19cd9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.add-image-button:hover {
+  background-color: #a187b8;
+}
+
+/* 작성 버튼 스타일 */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #b19cd9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #a187b8;
+}
